@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Menu | The Cozy Cup Cafe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVIGATION -->
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">The Cozy Cup<span>.</span></a>
+        </div>
+
+        <!-- Mobile menu checkbox -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Desktop navigation -->
+        <nav class="desktop-nav">
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+             <a href="order-history.html">Order History</a>
+            <a href="menu.html" class="sidebar-order">Order Now</a>
+
+        </nav>
+
+        <!-- Hamburger icon -->
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <!-- Mobile overlay -->
+        <label for="menu-toggle" class="sidebar-overlay"></label>
+
+        <!-- Mobile sidebar -->
+        <aside class="sidebar">
+
+            <div class="sidebar-heading">
+                <h2>Our Menu</h2>
+                <label for="menu-toggle" class="close-btn">&times;</label>
+            </div>
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+             <a href="order-history.html">Order History</a>
+            <a href="order.html" class="sidebar-order">Order Now</a>
+            
+
+        </aside>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- PAGE BANNER -->
+        <section class="page-banner">
+
+            <p class="subtitle">MADE FRESH FOR YOU</p>
+
+            <h1>Our Menu</h1>
+
+            <p>Discover your next favourite cup.</p>
+
+        </section>
+
+
+        <!-- MENU SEARCH AND FILTERS -->
+        <section class="menu-controls">
+
+            <div class="menu-search">
+
+                <input
+                    type="search"
+                    id="menuSearch"
+                    placeholder="Search for coffee, tea, pastries..."
+                    aria-label="Search menu items"
+                >
+
+            </div>
+
+            <div class="category-filters">
+
+                <button type="button" class="filter-btn active" data-filter="all">
+                    All
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="coffee">
+                    Coffee
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="tea">
+                    Tea
+                </button>
+
+                <button type="button" class="filter-btn" data-filter="pastries">
+                    Pastries
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- HOT COFFEE SECTION -->
+        <section class="menu-section">
+
+            <div class="section-heading">
+                <h2>Hot Coffee</h2>
+            </div>
+
+            <div class="product-container">
+
+                <!-- Cappuccino -->
+                <div class="product-card" data-category="coffee">
+
+                    <img src="images/cappuccino.jpg" alt="Cappuccino">
+
+                    <h3>Cappuccino</h3>
+
+                    <p class="product-description">Double espresso with steamed milk and a thick, velvety foam cap.</p>
+                    <div class="product-details">
+                        <p><strong>Sizes:</strong> Regular KSh 350 · Large KSh 430</p>
+                        <p><strong>Milk:</strong> Whole, oat (+KSh 60), or soy (+KSh 60)</p>
+                        <p><strong>Syrup:</strong> None, vanilla, caramel, or hazelnut (+KSh 40)</p>
+                        <p><strong>Dietary:</strong> Vegetarian; contains dairy with whole milk and soy with soy milk. Ask about ingredients and allergen cross-contact.</p>
+                        <p><strong>Availability:</strong> Prepared to order during opening hours</p>
+                    </div>
+                    <div class="drink-options">
+                        <label>Size <select class="drink-size"><option value="regular" data-price="350">Regular · KSh 350</option><option value="large" data-price="430">Large · KSh 430</option></select></label>
+                        <label>Milk <select class="drink-milk"><option>Whole milk</option><option data-extra="60">Oat milk (+KSh 60)</option><option data-extra="60">Soy milk (+KSh 60)</option></select></label>
+                        <label>Syrup <select class="drink-syrup"><option data-extra="0">No syrup</option><option data-extra="40">Vanilla (+KSh 40)</option><option data-extra="40">Caramel (+KSh 40)</option><option data-extra="40">Hazelnut (+KSh 40)</option></select></label>
+                    </div>
+
+                    <span class="price">KSh 350</span>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                        data-id="1"
+                        data-name="Cappuccino"
+                        data-price="350">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <!-- Espresso -->
+                <div class="product-card" data-category="coffee">
+
+                    <img src="images/espresso.jpg" alt="Espresso">
+
+                    <h3>Espresso</h3>
+
+                    <p class="product-description">A bold, single shot of finely ground coffee, pulled to order with a rich crema.</p>
+                    <div class="product-details">
+                        <p><strong>Sizes:</strong> Single KSh 250 · Double KSh 330</p>
+                        <p><strong>Serve:</strong> Black; milk and syrups are available on request.</p>
+                        <p><strong>Dietary:</strong> Vegan, dairy-free, and gluten-free as served. Caffeine: high. Ask about allergen cross-contact.</p>
+                        <p><strong>Availability:</strong> Prepared to order during opening hours</p>
+                    </div>
+
+                    <div class="drink-options">
+                        <label>Size <select class="drink-size"><option value="single" data-price="250">Single · KSh 250</option><option value="double" data-price="330">Double · KSh 330</option></select></label>
+                    </div>
+
+                    <span class="price">KSh 250</span>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                        data-id="2"
+                        data-name="Espresso"
+                        data-price="250">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <!-- Latte -->
+                <div class="product-card" data-category="coffee">
+
+                    <img src="images/latte.jpg" alt="Latte">
+
+                    <h3>Latte</h3>
+
+                    <p class="product-description">Smooth espresso with plenty of steamed milk and a light layer of foam. No syrup is included by default.</p>
+                    <div class="product-details">
+                        <p><strong>Sizes:</strong> Regular KSh 400 · Large KSh 480</p>
+                        <p><strong>Milk:</strong> Whole, oat (+KSh 60), or soy (+KSh 60)</p>
+                        <p><strong>Syrup:</strong> None, vanilla, caramel, or hazelnut (+KSh 40)</p>
+                        <p><strong>Dietary:</strong> Vegetarian; contains dairy with whole milk and soy with soy milk. Ask about ingredients and allergen cross-contact.</p>
+                        <p><strong>Availability:</strong> Prepared to order during opening hours</p>
+                    </div>
+                    <div class="drink-options">
+                        <label>Size <select class="drink-size"><option value="regular" data-price="400">Regular · KSh 400</option><option value="large" data-price="480">Large · KSh 480</option></select></label>
+                        <label>Milk <select class="drink-milk"><option>Whole milk</option><option data-extra="60">Oat milk (+KSh 60)</option><option data-extra="60">Soy milk (+KSh 60)</option></select></label>
+                        <label>Syrup <select class="drink-syrup"><option data-extra="0">No syrup</option><option data-extra="40">Vanilla (+KSh 40)</option><option data-extra="40">Caramel (+KSh 40)</option><option data-extra="40">Hazelnut (+KSh 40)</option></select></label>
+                    </div>
+
+                    <span class="price">KSh 400</span>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                        data-id="3"
+                        data-name="Latte"
+                        data-price="400">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PASTRIES AND SNACKS SECTION -->
+        <section class="menu-section">
+
+            <div class="section-heading">
+                <h2>Pastries & Snacks</h2>
+            </div>
+
+            <div class="product-container">
+
+                <!-- Croissant -->
+                <div class="product-card" data-category="pastries">
+
+                    <img src="images/croissant.jpg" alt="Croissant">
+
+                    <h3>Croissant</h3>
+
+                    <p>
+                        A buttery, flaky, and delicious pastry
+                        that is perfect for breakfast or a snack.
+                    </p>
+                    <div class="product-details">
+                        <p><strong>Serving:</strong> One croissant · KSh 200</p>
+                        <p><strong>Dietary:</strong> Contains wheat and dairy; may contain egg. Ask about allergen cross-contact.</p>
+                        <p><strong>Availability:</strong> Usually available during opening hours, while stocks last</p>
+                    </div>
+
+                    <span class="price">KSh 200</span>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                        data-id="4"
+                        data-name="Croissant"
+                        data-price="200">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+
+                <!-- Sweet Treat -->
+                <div class="product-card" data-category="pastries">
+
+                    <img src="images/croissant.jpg" alt="Sample of a freshly baked golden pastry">
+
+                    <h3>Sweet Treat</h3>
+
+                    <p class="product-description">A rotating house-baked sweet pastry, served fresh. Ask us which treat is available today.</p>
+                    <div class="product-details">
+                        <p><strong>Serving:</strong> One pastry · KSh 250</p>
+                        <p><strong>Dietary:</strong> Recipe varies daily; may contain wheat, dairy, eggs, or nuts. Please ask before ordering.</p>
+                        <p><strong>Availability:</strong> Daily selection while stocks last</p>
+                    </div>
+
+                    <span class="price">KSh 250</span>
+
+                    <button
+                        type="button"
+                        class="add-to-cart"
+                        data-id="5"
+                        data-name="Sweet Treat"
+                        data-price="250">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NO RESULTS MESSAGE -->
+        <p id="noMenuResults" hidden>
+            Sorry, no menu items match your search.
+        </p>
+
+
+        <!-- SHOPPING CART -->
+        <section class="cart-section" id="shopping-cart">
+
+            <div class="section-heading">
+
+                <p class="subtitle">YOUR ORDER</p>
+
+                <h2>Shopping Cart</h2>
+
+            </div>
+
+            <div class="cart-summary">
+
+                <p>
+                    Items in cart:
+                    <span id="cart-count">0</span>
+                </p>
+
+                <div id="cart-items">
+
+                    <p class="empty-cart">
+                        Your cart is currently empty.
+                    </p>
+
+                </div>
+
+                <div class="cart-total">
+
+                    <h3>
+                        Total: KSh
+                        <span id="cart-total">0</span>
+                    </h3>
+
+                </div>
+
+                <div class="cart-actions">
+                    <button type="button" id="clear-cart" class="clear-cart-btn">Clear Cart</button>
+
+                    <a href="order.html" class="order-now-btn">Order Now</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Brand -->
+            <div class="footer-column">
+
+                <h2>The Cozy Cup Cafe<span>.</span></h2>
+
+                <p>
+                    Your little corner of comfort,
+                    one cup at a time.
+                </p>
+
+            </div>
+
+
+            <!-- Quick links -->
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- Opening hours -->
+            <div class="footer-column">
+
+                <h3>Opening Hours</h3>
+
+                <p>Monday - Friday: 8 AM - 8 PM</p>
+
+                <p>Saturday - Sunday: 9 AM - 9 PM</p>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="footer-column">
+
+                <h3>Get In Touch</h3>
+
+                <p>Email: hello@cozycup.com</p>
+
+                <p>Phone: +25418097169</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 The Cozy Cup Cafe.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/main.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/cart.js" defer></script>
+
+</body>
+</html>

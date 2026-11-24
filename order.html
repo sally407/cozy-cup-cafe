@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <title>Complete Your Order | The Cozy Cup Cafe</title>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <!--HEADER AND NAVIGATION-->
+        <header class="header">
+
+            <div class="logo">
+                <a href="index.html">The Cozy Cup<span>.</span></a>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                <a href="order-history.html">Order History</a>
+
+                <a href="order.html" class="sidebar-order">Order Now</a>
+            </nav>
+
+            <label for="menu-toggle" class="hamburger">
+                &#9776;
+            </label>
+
+            <label for="menu-toggle" class="sidebar-overlay"></label>
+            <aside class="sidebar">
+                <div class="sidebar-heading">
+                    <h2>Our Menu</h2>
+                    <label for="menu-toggle" class="close-btn">&times;</label>
+
+                </div>
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+                 <a href="order-history.html">Order History</a>
+                <a href="order.html" class="sidebar-order">Order Now</a>
+                
+            </aside>
+
+        </header>
+
+        <main>
+
+            <!--PAGE BANNER-->
+            <section class="page-banner">
+
+                <p class="subtitle">ALMOST THERE</p>
+                <h1>Complete Your Order</h1>
+                <p>Good Coffee and great moments are just a click away!</p>
+            </section>
+
+            <!--CHECKOUT SECTION-->
+            <section id="checkout-section" class="checkout-section">
+
+                <div class="checkout-container">
+
+                    <!--ORDER SUMMARY-->
+                    <div class="checkout-summary">
+
+                        <div class="section-heading">
+                            <p class="subtitle">YOUR SELECTION</p>
+                            <h2>Order Summary</h2>
+                        </div>
+
+                        <div id="checkout-items">
+                            <p class="empty-cart">Your cart is currently empty.
+                                <a href="menu.html">Explore our menu</a>
+                            </p>
+                        </div>
+
+                        <div class="checkout-calculations">
+                            <div class="calculation-row">
+                                <span>Subtotal</span>
+                                <span>KSh <span id="checkout-subtotal">0</span></span>
+                            </div>
+
+                            <div class="calculation-row">
+                                <span>Delivery Fee</span>
+                                <span>KSh <span id="delivery-fee">0</span></span>
+                            </div>
+
+                            <div class="calculation-row checkout-grand-total">
+                                <strong>Total</strong>
+                                <strong>KSh <span id="checkout-total">0</span></strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--CUSTOMER PREFERENCES-->
+                    <div class="checkout-preferences">
+                        
+
+                        <div class="section-heading">
+                            <p class="subtitle">MAKE IT YOUR WAY</p>
+                            <h2>Customer Preferences</h2>
+
+                        </div>
+
+                        <form id="order-form">
+                            <!--CUSTOMER NAME-->
+                            <div class="form-group">
+
+                                <label for="customer-name">Your Name</label>
+                                <input type="text" id="customer-name" name="customer-name" placeholder="Enter your name" required>
+                            </div>
+
+                            <!--PHONE NUMBER-->
+                            <div class="form-group">
+                                <label for="customer-phone">Phone Number</label>
+                                <input type="tel" id="customer-phone" name="customerPhone" placeholder="Enter your phone number" required>
+                            </div>
+
+                            <!--ORDER METHOD-->
+                            <div class="form-group">
+
+                                <label for="order-method">Order Method</label>
+                                <select id="order-method" name="orderMethod" required>
+                                    <option value="">Select an option</option>
+                                    <option value="pickup">Pickup at the Cafe</option>
+                                    <option value="delivery">Home Delivery</option>
+                                </select>
+                            </div>
+
+                            <!--DELIVERY ADDRESS-->
+                            <div class="form-group" id="address-group" hidden>
+                                <label for="delivery-address">Delivery Address</label>
+                                <textarea id="delivery-address" name="deliveryAddress" placeholder="Enter your delivery address" rows="3" required></textarea>
+                            </div>
+
+                            <!--COLLECTION TIME-->
+                            <div class="form-group">
+                                <label for="preferred-time">Preferred Time</label>
+                                <input type="time" id="preferred-time" name="preferredTime" required>
+                            </div>
+
+                            <!--SPECIAL INSTRUCTIONS-->
+                            <div class="form-group">
+                                <label for="special-instructions">Special Instructions(Optional)</label>
+                                <textarea id="special-instructions" name="specialInstructions" placeholder="Any special instructions for your order?" rows="4"></textarea>
+                            </div>
+
+                            <!--PAYMENT METHOD-->
+                            <div class="form-group">
+                                <label for="payment-method">Payment Method</label>
+                                <select id="payment-method" name="paymentMethod" required>
+                                    <option value="">Select a payment method</option>
+                                    <option value="cash">Pay at the cafe / On Delivery</option>
+                                    <option value="card">Credit/Debit Card</option>
+                                    <option value="mpesa">M-Pesa (Payment simulator)</option>
+                                </select>
+                            </div>
+
+                                <button type="submit" id="confirm-order" class="confirm-order-btn">Confirm Order</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--ORDER SUCCESS MESSAGE-->
+            <section id="order-success" class="order-success" hidden>
+
+                <div class="success-card">
+
+                    <div class="success-icon">✓</div>
+                    <h2>Order Placed Successfully!</h2>
+
+                    <p>Thank you for choosing The Cozy Cup Cafe. Your Order has been received</p>
+                 <div class="receipt">
+                    <h3>ORDER RECEIPT</h3>
+
+                 
+                    <p>Order Reference: <strong id="order-reference"></strong></p>
+
+                    <hr>
+
+                    <h4>Customer Details</h4>
+                    <p>Name: <span id="receipt-name"></span></p>
+                    <p>Phone: <span id="receipt-phone"></span></p>
+                    <p>Order Method: <span id="receipt-method"></span></p>
+                    <p id="receipt-address-row" hidden>Delivery Address: <span id="receipt-address"></span></p>
+                    <p>Preferred Time: <span id="receipt-time"></span></p>
+                    <p>Payment Method: <span id="receipt-payment"></span></p>
+
+                    <hr>
+
+                    <h4>Ordered Items</h4>
+
+                    <div id="receipt-items"></div>
+
+                    <hr>
+
+                    <div class="receipt-totals">
+                        <p>Subtotal: <strong id="receipt-subtotal"></strong></p>
+                        <p>Delivery Fee: <strong id="receipt-delivery"></strong></p>
+                        <h3>Total: <strong id="receipt-total"></strong></h3>
+                    </div>
+
+                    <hr>
+
+                    <p id="receipt-instructions"></p>
+
+                    </div>
+
+             <div class="order-success-actions">
+
+                <a href="index.html" class="back-home-btn">Back to Home</a>
+                <a href="menu.html" class="back-home-btn">Continue Shopping</a>
+                <a href="order-history.html" class="back-home-btn">View Order History</a>
+             </div>
+
+                    
+                </div>
+            </section>
+</main>
+
+<!--FOOTER-->
+    <footer class="footer">
+
+        <div class="footer-container">
+<!--BRAND-->
+            <div class="footer-column">
+
+                <h2>The Cozy Cup Cafe<span>.</span></h2>
+                <p>Your little corner of comfort, one cup at a time.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Opening Hours</h3>
+                <p>Monday - Friday: 8 AM - 8 PM</p>
+                <p>Saturday - Sunday: 9 AM - 9 PM</p>
+
+            </div>
+
+            <div class="footer-column">
+                <h3>Get In Touch</h3>
+                <p>Email: hello@cozycup.com</p>
+                <p>Phone: +25418097169</p>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 The Cozy Cup Cafe. 
+                All Rights Reserved.
+            </p>
+        </div>
+        
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/order.js" defer></script>
+
+    </body>
+</html>
+
+                    
